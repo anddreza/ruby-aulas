@@ -13,9 +13,14 @@
 # end 
 
 #3ª forma
-bandas = ["banda A", "banda B", "banda C", "banda D"]
-i = 0
-bandas.size.times do
-    puts bandas[i]
-    i = i + 1
-end 
+
+bandas = ["banda A", "banda B", "banda C", "banda D", "banda E"]
+# i = 0
+# bandas.size.times do
+#     puts bandas[i]
+#     i = i + 1
+# end 
+
+bandas.each do |banda|
+    puts banda
+end
