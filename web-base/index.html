@@ -31,17 +31,18 @@
             </thead>
     
             <tbody>
-                <tr>
-                    <td>Andreza Silva</td>
-                    <td>andrezasilva744@gmail.com</td>
-                    <td>10</td>
+                <!--Alunos: fonte de dados; aluno: ilhas, apelido para o elemento que estiver sendo iterado -->
+                <tr v-for="aluno in alunos">
+                    <td>{{aluno.nome}}</td>
+                    <td>{{aluno.email}}</td>
+                    <td>{{aluno.nota}}</td>
                 </tr>
     
-                <tr>
+                <!-- <tr>
                     <td>Joao</td>
                     <td> joao@gmail.com</td>
                     <td>10</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
@@ -49,7 +50,14 @@
 
 <script>
     var app = new Vue({
-        el: "#app"
+        el: "#app",
+        data: {
+            alunos: [
+                {nome: 'Andreza Silva', email: 'andrezasilva744@gmail.com', nota: 10},
+                {nome: 'Deb', email: 'deb@gmail.com', nota: 9},
+                {nome: 'Jo', email: 'jo@gmail.com', nota: 9}
+            ]
+        }
     })
 </script>
 
